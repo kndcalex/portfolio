@@ -5,26 +5,47 @@
         <meta name=" viewport" content="width=device-width, initial-scale+=1.0">
         <title> John Kendrick Alexander T. Cabunilas | Web Portfolio</title>
         <style>
-            * body {
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+            body {
             background-color: #0a0a0a;
             color: #e0e0e0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: left;
-            align-items: center;
-            min-height: 100vh;
+            min-height: 50vh;
             margin: 0;
+            padding: 40px 40px;  /* Space around the edges */
         }
         .container {
-            text-align: left;
+            display: flex;
+            justify-content: space-between;  /* Name left, image right */
+            align-items: center;             /* Vertically centered */
+            min-height: 10vh;                /* Take most of the screen height */
+        }
+        .name-section {
+            flex: 1;
         }
         h1 {
             color: #ff6b35;
-            margin-bottom: 20px;
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .subtitle {
+            color: #888888;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .image-section {
+            display: flex;
+            justify-content: flex-end;  /* Push image to the right */
+            align-items: center;       /* Center vertically */
         }
         .profile-img {
-            width: 200px;
-            height: 200px;
+            width: 350px;
+            height: 420px;
             object-fit: cover;
             border-radius: 20px;
             border: 3px solid #ff6b35;
@@ -33,7 +54,17 @@
         
     </head>
     <body>
-        <h1>John Kendrick Alexander Cabunilas</h1>
-        <img src="Images/Profile picture/1x1 Kendrick.jpg" alt="John Kendrick Alexander Cabunilas" class="profile-img">
+        <div class="container">
+
+        <div class="name-section">
+            <h1>John Kendrick Alexander Cabunilas</h1>
+            <p class="subtitle">IT professional</p>
+        </div>
+
+        <div class="image-section">
+            <img src="profile.jpg" alt="John Kendrick Alexander Cabunilas" class="profile-img">
+        </div>
+    </div>
+        
     </body>
 </html>
