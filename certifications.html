@@ -3,10 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Certifications | John Kendrick Alexander T. Cabunilas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .nav-menu a[href="certifications.html"] {
+            color: #e53e3e;
+            background-color: #fff5f5;
+            font-weight: 600;
+        }
+        .nav-menu a[href="index.html"] {
+            color: #718096;
+            background-color: transparent;
+            font-weight: 500;
+        }
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .cert-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #e2e8f0;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        .cert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .cert-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+        }
+        .cert-card.completed::before {
+            background: #48bb78;
+        }
+        .cert-card.ongoing::before {
+            background: #ed8936;
+        }
+        .cert-card h3 {
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        .cert-card p {
+            color: #718096;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .status {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .status.completed {
+            background: #c6f6d5;
+            color: #22543d;
+        }
+        .status.ongoing {
+            background: #feebc8;
+            color: #744210;
+        }
+    </style>
 </head>
 <body>
-    <h1>Certification:</h1>
-    <h2>Word, Powerpoint, On going~</h2>
+
+    <aside class="sidebar">
+        <div class="logo">Portfolio</div>
+        <ul class="nav-menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="techstack.html"><i class="fas fa-code"></i> Tech Stack</a></li>
+            <li><a href="certifications.html" class="active"><i class="fas fa-certificate"></i> Certifications</a></li>
+        </ul>
+    </aside>
+
+    <div class="corner-accent"></div>
+    <div class="corner-accent-bottom"></div>
+
+    <main class="main-content">
+        <div class="content-left" style="max-width: 700px;">
+            <h1 class="headline">My <span class="highlight">Certifications</span></h1>
+            
+            <div class="cert-grid">
+                <div class="cert-card completed">
+                    <h3><i class="fas fa-file-word"></i> Microsoft Word</h3>
+                    <p>Proficient in document creation, formatting, and editing using Microsoft Word.</p>
+                    <span class="status completed">Completed</span>
+                </div>
+                <div class="cert-card completed">
+                    <h3><i class="fas fa-file-powerpoint"></i> Microsoft PowerPoint</h3>
+                    <p>Skilled in creating professional presentations with Microsoft PowerPoint.</p>
+                    <span class="status completed">Completed</span>
+                </div>
+                <div class="cert-card ongoing">
+                    <h3><i class="fas fa-rocket"></i> More Certifications</h3>
+                    <p>Currently pursuing additional certifications to expand my skill set.</p>
+                    <span class="status ongoing">On Going</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
 </body>
 </html>

@@ -3,10 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About Me | John Kendrick Alexander T. Cabunilas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .nav-menu a[href="about.html"] {
+            color: #e53e3e;
+            background-color: #fff5f5;
+            font-weight: 600;
+        }
+        .nav-menu a[href="index.html"] {
+            color: #718096;
+            background-color: transparent;
+            font-weight: 500;
+        }
+    </style>
 </head>
 <body>
-    <h1>About me:</h1>
-    <h2>I wanna be IT professional.</h2>
+
+    <aside class="sidebar">
+        <div class="logo">Portfolio</div>
+        <ul class="nav-menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="about.html" class="active"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="techstack.html"><i class="fas fa-code"></i> Tech Stack</a></li>
+            <li><a href="certifications.html"><i class="fas fa-certificate"></i> Certifications</a></li>
+        </ul>
+    </aside>
+
+    <div class="corner-accent"></div>
+    <div class="corner-accent-bottom"></div>
+
+    <main class="main-content">
+        <div class="content-left" style="max-width: 700px;">
+            <h1 class="headline">About <span class="highlight">Me</span></h1>
+            <p class="description" style="margin-top: 20px;">
+                <strong style="color: #e53e3e;">My Goal:</strong> I wanna be an IT professional.
+            </p>
+            <p class="description">
+                I am a student passionate about technology and continuously learning new skills to grow in the IT field. I also enjoy playing online games and I like photography too, capturing moments specialy interms of nature like sunsets and skies.
+            </p>
+            <p class="description">
+                Currently pursuing my studies while building hands-on experience through projects and certifications.
+            </p>
+            <a href="techstack.html" class="btn">View My Tech Stack</a>
+        </div>
+    </main>
+
 </body>
 </html>
