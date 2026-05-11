@@ -1,70 +1,41 @@
 <!DOCTYPE html>
-<html lamg="en">
-    <head>
-        <meta charset="UTF-8"> 
-        <meta name=" viewport" content="width=device-width, initial-scale+=1.0">
-        <title> John Kendrick Alexander T. Cabunilas | Web Portfolio</title>
-        <style>
-            * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-            body {
-            background-color: #0a0a0a;
-            color: #e0e0e0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            min-height: 50vh;
-            margin: 0;
-            padding: 40px 40px;  /* Space around the edges */
-        }
-        .container {
-            display: flex;
-            justify-content: space-between;  /* Name left, image right */
-            align-items: center;             /* Vertically centered */
-            min-height: 10vh;                /* Take most of the screen height */
-        }
-        .name-section {
-            flex: 1;
-        }
-        h1 {
-            color: #ff6b35;
-            font-size: 42px;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-        .subtitle {
-            color: #888888;
-            font-size: 18px;
-            margin-top: 10px;
-        }
-        .image-section {
-            display: flex;
-            justify-content: flex-end;  /* Push image to the right */
-            align-items: center;       /* Center vertically */
-        }
-        .profile-img {
-            width: 350px;
-            height: 420px;
-            object-fit: cover;
-            border-radius: 20px;
-            border: 3px solid #ff6b35;
-        }
-        </style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Kendrick Alexander T. Cabunilas | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <ul class="nav-menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="techstack.html">Tech Stack</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
         
-    </head>
-    <body>
-        <div class="container">
-
-        <div class="name-section">
-            <h1>John Kendrick Alexander Cabunilas</h1>
-            <p class="subtitle">IT professional</p>
+        <!-- Circular Profile Photo -->
+        <div class="profile-circle">
+            <img src="profile.jpg" alt="John Kendrick Alexander Cabunilas">
         </div>
 
-        <div class="profile-section">
-            <img src="profile.jpg" alt="John Kendrick Alexander Cabunilas" class="profile-img">
-        </div>
-    </main>
+        <!-- Name -->
+        <h1>Hi, I'm John Kendrick Alexander Cabunilas</h1>
+
+        <!-- Description -->
+        <p>
+            Welcome to my personal portfolio website. I am an aspiring IT professional 
+            passionate about web development, Microsoft Office tools, and programming.
+        </p>
+
+    </section>
 
 </body>
 </html>
