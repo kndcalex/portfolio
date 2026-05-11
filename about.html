@@ -4,51 +4,165 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | John Kendrick Alexander T. Cabunilas</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
     <style>
-        .nav-menu a[href="about.html"] {
-            color: #e53e3e;
-            background-color: #fff5f5;
-            font-weight: 600;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .nav-menu a[href="index.html"] {
-            color: #718096;
-            background-color: transparent;
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            min-height: 100vh;
+        }
+
+        .top-nav {
+            background-color: #111111;
+            border-bottom: 1px solid #1f1f1f;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-menu a {
+            display: block;
+            color: #a0a0a0;
+            text-decoration: none;
+            padding: 24px 30px;
+            font-size: 16px;
             font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: #ff6b35;
+        }
+
+        .nav-menu a.active {
+            color: #ff6b35;
+        }
+
+        .nav-menu a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 20%;
+            width: 60%;
+            height: 3px;
+            background-color: #ff6b35;
+            border-radius: 2px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding-top: 70px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff6b35;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            color: #e0e0e0;
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        .info-box {
+            background-color: #111111;
+            border: 1px solid #1f1f1f;
+            border-radius: 15px;
+            padding: 30px 40px;
+            margin: 10px 0;
+            max-width: 500px;
+            width: 90%;
+            text-align: left;
+        }
+
+        .info-box h3 {
+            color: #ff6b35;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            color: #a0a0a0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu a {
+                padding: 15px 15px;
+                font-size: 14px;
+            }
+            h1 {
+                font-size: 32px;
+            }
+            .info-box {
+                padding: 20px 25px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <aside class="sidebar">
-        <div class="logo">Portfolio</div>
+    <nav class="top-nav">
         <ul class="nav-menu">
-            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="about.html" class="active"><i class="fas fa-user"></i> About</a></li>
-            <li><a href="techstack.html"><i class="fas fa-code"></i> Tech Stack</a></li>
-            <li><a href="certifications.html"><i class="fas fa-certificate"></i> Certifications</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About Me</a></li>
+            <li><a href="techstack.html">Tech Stack</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
         </ul>
-    </aside>
+    </nav>
 
-    <div class="corner-accent"></div>
-    <div class="corner-accent-bottom"></div>
+    <div class="container">
+        <h1>About Me</h1>
+        <h2>Get to know who I am</h2>
 
-    <main class="main-content">
-        <div class="content-left" style="max-width: 700px;">
-            <h1 class="headline">About <span class="highlight">Me</span></h1>
-            <p class="description" style="margin-top: 20px;">
-                <strong style="color: #e53e3e;">My Goal:</strong> I wanna be an IT professional.
-            </p>
-            <p class="description">
-                I am a student passionate about technology and continuously learning new skills to grow in the IT field. I also enjoy playing online games and I like photography too, capturing moments specialy interms of nature like sunsets and skies.
-            </p>
-            <p class="description">
-                Currently pursuing my studies while building hands-on experience through projects and certifications.
-            </p>
-            <a href="techstack.html" class="btn">View My Tech Stack</a>
+        <div class="info-box">
+            <h3>🎯 My Goal</h3>
+            <p>I wanna be successful someday and do what I love like Helping my family, Travelling, and Capturing moments with my dream camera.</p>
         </div>
-    </main>
+
+        <div class="info-box">
+            <h3>🎓 Background</h3>
+            <p>I am a student woh is thriving for successful life.</p>
+        </div>
+
+        <div class="info-box">
+            <h3>🏫 Education</h3>
+            <p>Currently pursuing my studies while building hands-on experience through projects and certifications.</p>
+        </div>
+
+        <div class="info-box">
+            <h3>✉️ Contact</h3>
+            <p>Feel free to connect with me through my portfolio or reach out for collaboration opportunities.</p>
+        </div>
+    </div>
 
 </body>
 </html>
