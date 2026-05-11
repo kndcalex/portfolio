@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Kendrick Alexander T. Cabunilas | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>John Kendrick Alexander Cabunilas | Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         * {
             margin: 0;
@@ -13,16 +22,16 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
             background-color: #0a0a0a;
             color: #e0e0e0;
             min-height: 100vh;
         }
 
+        /* Top Navigation */
         .top-nav {
             background-color: #111111;
             border-bottom: 1px solid #1f1f1f;
-            padding: 0;
             position: fixed;
             top: 0;
             left: 0;
@@ -37,7 +46,8 @@
         .nav-menu {
             list-style: none;
             display: flex;
-            gap: 0;
+            margin: 0;
+            padding: 0;
         }
 
         .nav-menu a {
@@ -70,6 +80,7 @@
             border-radius: 2px;
         }
 
+        /* Hero Section */
         .hero {
             display: flex;
             flex-direction: column;
@@ -88,6 +99,11 @@
             overflow: hidden;
             margin-bottom: 35px;
             box-shadow: 0 0 30px rgba(255, 107, 53, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-circle:hover {
+            transform: scale(1.05);
         }
 
         .profile-circle img {
@@ -110,6 +126,24 @@
             max-width: 600px;
             padding: 0 20px;
         }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu a {
+                padding: 15px 15px;
+                font-size: 14px;
+            }
+            .profile-circle {
+                width: 200px;
+                height: 200px;
+            }
+            .hero h1 {
+                font-size: 28px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -125,11 +159,13 @@
 
     <section class="hero">
         <div class="profile-circle">
-            <img src="profile.jpg" alt="John Kendrick Alexander Cabunilas">
+            <img src="Images/Profile picture/1x1 Kendrick.jpg" alt="John Kendrick Alexander Cabunilas">
         </div>
         <h1>Hi, I'm John Kendrick Alexander Cabunilas</h1>
-        <p>Welcome to my personal portfolio website. I am just a student who wants to achieve a life filled with adventure.</p>
+        <p>Welcome to my personal portfolio website. I am an aspiring IT professional passionate about web development, Microsoft Office tools, and programming.</p>
     </section>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

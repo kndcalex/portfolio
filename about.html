@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me | John Kendrick Alexander T. Cabunilas</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>About Me | John Kendrick Alexander Cabunilas</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         * {
             margin: 0;
@@ -13,7 +22,7 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
             background-color: #0a0a0a;
             color: #e0e0e0;
             min-height: 100vh;
@@ -36,6 +45,8 @@
         .nav-menu {
             list-style: none;
             display: flex;
+            margin: 0;
+            padding: 0;
         }
 
         .nav-menu a {
@@ -68,13 +79,14 @@
             border-radius: 2px;
         }
 
-        .container {
+        .container-custom {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            padding-top: 70px;
+            padding-top: 90px;
+            padding-bottom: 40px;
             text-align: center;
         }
 
@@ -87,9 +99,9 @@
 
         h2 {
             color: #e0e0e0;
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 400;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         .info-box {
@@ -97,28 +109,35 @@
             border: 1px solid #1f1f1f;
             border-radius: 15px;
             padding: 30px 40px;
-            margin: 10px 0;
-            max-width: 500px;
+            margin: 12px 0;
+            max-width: 650px;
             width: 90%;
             text-align: left;
+            transition: all 0.3s ease;
+        }
+
+        .info-box:hover {
+            border-color: #ff6b35;
+            transform: translateY(-3px);
         }
 
         .info-box h3 {
             color: #ff6b35;
             font-size: 20px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            font-weight: 600;
         }
 
         .info-box p {
             color: #a0a0a0;
             font-size: 16px;
-            line-height: 1.6;
+            line-height: 1.8;
         }
 
         @media (max-width: 768px) {
             .nav-menu a {
-                padding: 15px 15px;
-                font-size: 14px;
+                padding: 15px 12px;
+                font-size: 13px;
             }
             h1 {
                 font-size: 32px;
@@ -140,30 +159,32 @@
         </ul>
     </nav>
 
-    <div class="container">
+    <div class="container-custom">
         <h1>About Me</h1>
         <h2>Get to know who I am</h2>
 
         <div class="info-box">
-            <h3>🎯 My Goal</h3>
-            <p>I wanna be successful someday and do what I love like Helping my family, Travelling, and Capturing moments with my dream camera.</p>
+            <h3><i class="fas fa-user"></i> Who I Am</h3>
+            <p>My name is John Kendrick Alexander Cabunilas, and I am currently a student with a strong passion for technology and information systems. I have always been fascinated by how computers and software work, which led me to pursue a path in IT. In my free time, I enjoy exploring new technologies, building small projects, and learning about the latest trends in web development. I believe that continuous learning is the key to success in the ever-evolving tech industry.</p>
         </div>
 
         <div class="info-box">
-            <h3>🎓 Background</h3>
-            <p>I am a student woh is thriving for successful life.</p>
+            <h3><i class="fas fa-graduation-cap"></i> My Education</h3>
+            <p>I am currently pursuing my studies while actively building hands-on experience through various projects and certifications. My coursework has introduced me to programming, web development, and database management. I am committed to applying the theoretical knowledge I gain in class to real-world scenarios through practical projects and self-study.</p>
         </div>
 
         <div class="info-box">
-            <h3>🏫 Education</h3>
-            <p>Currently pursuing my studies while building hands-on experience through projects and certifications.</p>
+            <h3><i class="fas fa-bullseye"></i> My Professional Goals</h3>
+            <p>I wanna be an IT professional who can build reliable and efficient digital solutions for businesses and communities. My ultimate goal is to become a full-stack developer capable of creating complete web applications from scratch. I aspire to work in a dynamic tech company where I can contribute my skills while continuing to grow as a developer. In the long term, I hope to use my expertise to help organizations improve their digital presence and operational efficiency.</p>
         </div>
 
         <div class="info-box">
-            <h3>✉️ Contact</h3>
-            <p>Feel free to connect with me through my portfolio or reach out for collaboration opportunities.</p>
+            <h3><i class="fas fa-envelope"></i> Let's Connect</h3>
+            <p>I am always open to collaboration, learning opportunities, and meaningful conversations about technology. Feel free to reach out if you would like to connect or work together on a project.</p>
         </div>
     </div>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

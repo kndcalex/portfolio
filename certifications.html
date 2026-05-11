@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certifications | John Kendrick Alexander T. Cabunilas</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Certifications | John Kendrick Alexander Cabunilas</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         * {
             margin: 0;
@@ -13,7 +22,7 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
             background-color: #0a0a0a;
             color: #e0e0e0;
             min-height: 100vh;
@@ -36,6 +45,8 @@
         .nav-menu {
             list-style: none;
             display: flex;
+            margin: 0;
+            padding: 0;
         }
 
         .nav-menu a {
@@ -68,13 +79,14 @@
             border-radius: 2px;
         }
 
-        .container {
+        .container-custom {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            padding-top: 70px;
+            padding-top: 90px;
+            padding-bottom: 40px;
             text-align: center;
         }
 
@@ -87,22 +99,29 @@
 
         h2 {
             color: #e0e0e0;
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 400;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         .cert-box {
             background-color: #111111;
             border: 1px solid #1f1f1f;
             border-radius: 15px;
-            padding: 25px 40px;
-            margin: 10px 0;
-            max-width: 500px;
+            padding: 25px 35px;
+            margin: 12px 0;
+            max-width: 600px;
             width: 90%;
             text-align: left;
             position: relative;
             overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .cert-box:hover {
+            border-color: #ff6b35;
+            transform: translateY(-3px);
         }
 
         .cert-box::before {
@@ -126,6 +145,7 @@
             color: #e0e0e0;
             font-size: 20px;
             margin-bottom: 10px;
+            font-weight: 600;
         }
 
         .cert-box p {
@@ -133,6 +153,15 @@
             font-size: 15px;
             line-height: 1.6;
             margin-bottom: 15px;
+        }
+
+        .cert-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #1f1f1f;
         }
 
         .badge {
@@ -153,16 +182,33 @@
             color: #ed8936;
         }
 
+        .verify-link {
+            color: #ff6b35;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 10px;
+            transition: color 0.3s;
+        }
+
+        .verify-link:hover {
+            color: #ff8c5a;
+            text-decoration: underline;
+        }
+
         @media (max-width: 768px) {
             .nav-menu a {
-                padding: 15px 15px;
-                font-size: 14px;
+                padding: 15px 12px;
+                font-size: 13px;
             }
             h1 {
                 font-size: 32px;
             }
-            .cert-box {
-                padding: 20px 25px;
+            .cert-image {
+                height: 140px;
             }
         }
     </style>
@@ -178,28 +224,89 @@
         </ul>
     </nav>
 
-    <div class="container">
+    <div class="container-custom">
         <h1>My Certifications</h1>
         <h2>What I've achieved and what's next</h2>
 
-        <div class="cert-box completed">
-            <h3>📄 Microsoft Word</h3>
-            <p>Proficient in document creation, formatting, and editing using Microsoft Word.</p>
+        <!-- Certification 1: Microsoft Word -->
+        <div class="cert-box completed" onclick="showCert('word')">
+            <img src="Images/word-cert.jpg" alt="Microsoft Word Certificate" class="cert-image" onerror="this.style.display='none'">
+            <h3><i class="fas fa-file-word"></i> Microsoft Word</h3>
+            <p>Proficient in document creation, formatting, and editing using Microsoft Word. Completed comprehensive training covering advanced formatting, mail merge, and document collaboration features.</p>
             <span class="badge completed">Completed</span>
+            <br>
+            <a href="https://www.microsoft.com/en-us/learning" target="_blank" class="verify-link" onclick="event.stopPropagation()">
+                <i class="fas fa-external-link-alt"></i> Verify Certification
+            </a>
         </div>
 
-        <div class="cert-box completed">
-            <h3>📊 Microsoft PowerPoint</h3>
-            <p>Skilled in creating professional presentations with Microsoft PowerPoint.</p>
+        <!-- Certification 2: Microsoft PowerPoint -->
+        <div class="cert-box completed" onclick="showCert('powerpoint')">
+            <img src="Images/powerpoint-cert.jpg" alt="Microsoft PowerPoint Certificate" class="cert-image" onerror="this.style.display='none'">
+            <h3><i class="fas fa-file-powerpoint"></i> Microsoft PowerPoint</h3>
+            <p>Skilled in creating professional presentations with Microsoft PowerPoint. Mastered slide design, animations, transitions, and presentation delivery techniques.</p>
             <span class="badge completed">Completed</span>
+            <br>
+            <a href="https://www.microsoft.com/en-us/learning" target="_blank" class="verify-link" onclick="event.stopPropagation()">
+                <i class="fas fa-external-link-alt"></i> Verify Certification
+            </a>
         </div>
 
-        <div class="cert-box ongoing">
-            <h3>🚀 More Certifications</h3>
-            <p>Currently pursuing additional certifications to expand my skill set.</p>
+        <!-- Certification 3: More Coming -->
+        <div class="cert-box ongoing" onclick="showCert('more')">
+            <h3><i class="fas fa-rocket"></i> More Certifications</h3>
+            <p>Currently pursuing additional certifications in web development, programming, and IT fundamentals to expand my skill set and professional qualifications.</p>
             <span class="badge ongoing">On Going</span>
         </div>
     </div>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function showCert(cert) {
+            if (cert === 'word') {
+                Swal.fire({
+                    title: 'Microsoft Word Certification',
+                    text: 'Proficient in document creation, formatting, and editing.',
+                    imageUrl: 'Images/word-cert.jpg',
+                    imageWidth: 400,
+                    imageHeight: 300,
+                    imageAlt: 'Microsoft Word Certificate',
+                    confirmButtonColor: '#ff6b35',
+                    confirmButtonText: 'Close',
+                    background: '#111111',
+                    color: '#e0e0e0'
+                });
+            } else if (cert === 'powerpoint') {
+                Swal.fire({
+                    title: 'Microsoft PowerPoint Certification',
+                    text: 'Skilled in creating professional presentations.',
+                    imageUrl: 'Images/powerpoint-cert.jpg',
+                    imageWidth: 400,
+                    imageHeight: 300,
+                    imageAlt: 'Microsoft PowerPoint Certificate',
+                    confirmButtonColor: '#ff6b35',
+                    confirmButtonText: 'Close',
+                    background: '#111111',
+                    color: '#e0e0e0'
+                });
+            } else {
+                Swal.fire({
+                    title: 'More Certifications',
+                    text: 'Currently pursuing additional certifications. Stay tuned!',
+                    icon: 'info',
+                    confirmButtonColor: '#ff6b35',
+                    confirmButtonText: 'Got it!',
+                    background: '#111111',
+                    color: '#e0e0e0'
+                });
+            }
+        }
+    </script>
 
 </body>
 </html>
