@@ -1,263 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Stack | John Kendrick Alexander Cabunilas</title>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Devicon (Programming Language Logos) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', 'Segoe UI', sans-serif;
-            background-color: #0a0a0a;
-            color: #e0e0e0;
-            min-height: 100vh;
-        }
-
-        .top-nav {
-            background-color: #111111;
-            border-bottom: 1px solid #1f1f1f;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .nav-menu {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-menu a {
-            display: block;
-            color: #a0a0a0;
-            text-decoration: none;
-            padding: 24px 30px;
-            font-size: 16px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav-menu a:hover {
-            color: #ff6b35;
-        }
-
-        .nav-menu a.active {
-            color: #ff6b35;
-        }
-
-        .nav-menu a.active::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 20%;
-            width: 60%;
-            height: 3px;
-            background-color: #ff6b35;
-            border-radius: 2px;
-        }
-
-        .container-custom {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            padding-top: 90px;
-            padding-bottom: 40px;
-            text-align: center;
-        }
-
-        h1 {
-            color: #ff6b35;
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        h2 {
-            color: #e0e0e0;
-            font-size: 22px;
-            font-weight: 400;
-            margin-bottom: 40px;
-        }
-
-        .skill-box {
-            background-color: #111111;
-            border: 1px solid #1f1f1f;
-            border-radius: 15px;
-            padding: 30px 40px;
-            margin: 12px 0;
-            max-width: 600px;
-            width: 90%;
-            text-align: left;
-            transition: all 0.3s ease;
-        }
-
-        .skill-box:hover {
-            border-color: #ff6b35;
-            transform: translateY(-3px);
-        }
-
-        .skill-box h3 {
-            color: #ff6b35;
-            font-size: 20px;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .skill-items {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .skill-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .skill-item i {
-            font-size: 50px;
-        }
-
-        .skill-item span {
-            color: #a0a0a0;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        .skill-box ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .skill-box ul li {
-            color: #a0a0a0;
-            font-size: 16px;
-            padding: 8px 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .skill-box ul li::before {
-            content: '▸';
-            color: #ff6b35;
-            font-weight: bold;
-        }
-
-        @media (max-width: 768px) {
-            .nav-menu a {
-                padding: 15px 12px;
-                font-size: 13px;
-            }
-            h1 {
-                font-size: 32px;
-            }
-            .skill-item i {
-                font-size: 40px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Stack | John Kendrick Cabunilas</title>
+  
+  <!-- Google Fonts (must come BEFORE style.css) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Devicon (Programming Language Logos) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 </head>
 <body>
 
-    <nav class="top-nav">
-        <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="techstack.html" class="active">Tech Stack</a></li>
-            <li><a href="certifications.html">Certifications</a></li>
-        </ul>
-    </nav>
+  <nav class="top-nav">
+    <a href="index.html" class="nav-brand">
+      <div class="brand-circle">JK</div>
+      <span class="brand-name">John Kendrick Cabunilas</span>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="tech-stack.html" class="active">Tech Stack</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <div class="container-custom">
-        <h1>My Tech Stack</h1>
-        <h2>Technologies and tools I've learned</h2>
+  <div class="container-custom">
+    <h1 class="page-title">My Tech Stack</h1>
+    <h2 class="page-subtitle">Technologies and tools I've learned</h2>
 
-        <div class="skill-box">
-            <h3><i class="fas fa-file-word"></i> Microsoft Office</h3>
-            <div class="skill-items">
-                <div class="skill-item">
-                    <i class="devicon-microsoftword-plain colored"></i>
-                    <span>Microsoft Word</span>
-                </div>
-                <div class="skill-item">
-                    <i class="devicon-microsoftpowerpoint-plain colored"></i>
-                    <span>Microsoft PowerPoint</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="skill-box">
-            <h3><i class="fas fa-globe"></i> Web Development</h3>
-            <div class="skill-items">
-                <div class="skill-item">
-                    <i class="devicon-html5-plain colored"></i>
-                    <span>HTML5</span>
-                </div>
-                <div class="skill-item">
-                    <i class="devicon-css3-plain colored"></i>
-                    <span>CSS3</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="skill-box">
-            <h3><i class="fas fa-laptop-code"></i> Programming</h3>
-            <div class="skill-items">
-                <div class="skill-item">
-                    <i class="devicon-java-plain colored"></i>
-                    <span>Java</span>
-                </div>
-                <div class="skill-item">
-                    <i class="devicon-python-plain colored"></i>
-                    <span>Python</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="skill-box">
-            <h3><i class="fas fa-rocket"></i> More Coming Soon</h3>
-            <ul>
-                <li>JavaScript & React</li>
-                <li>Database Management (MySQL)</li>
-                <li>Version Control (Git & GitHub)</li>
-                <li>Continuously learning and expanding my skills...</li>
-            </ul>
-        </div>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <i class="devicon-html5-plain colored"></i>
+        <span>HTML</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-css3-plain colored"></i>
+        <span>CSS</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-python-plain colored"></i>
+        <span>Python</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-java-plain colored"></i>
+        <span>Java</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-c-plain colored"></i>
+        <span>C</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-postgresql-plain colored"></i>
+        <span>PostgreSQL</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-kotlin-plain colored"></i>
+        <span>Kotlin</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-git-plain colored"></i>
+        <span>Git</span>
+      </div>
+      <div class="tech-card">
+        <i class="devicon-github-original colored"></i>
+        <span>GitHub</span>
+      </div>
     </div>
+  </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

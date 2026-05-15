@@ -1,190 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me | John Kendrick Alexander Cabunilas</title>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', 'Segoe UI', sans-serif;
-            background-color: #0a0a0a;
-            color: #e0e0e0;
-            min-height: 100vh;
-        }
-
-        .top-nav {
-            background-color: #111111;
-            border-bottom: 1px solid #1f1f1f;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .nav-menu {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-menu a {
-            display: block;
-            color: #a0a0a0;
-            text-decoration: none;
-            padding: 24px 30px;
-            font-size: 16px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav-menu a:hover {
-            color: #ff6b35;
-        }
-
-        .nav-menu a.active {
-            color: #ff6b35;
-        }
-
-        .nav-menu a.active::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 20%;
-            width: 60%;
-            height: 3px;
-            background-color: #ff6b35;
-            border-radius: 2px;
-        }
-
-        .container-custom {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            padding-top: 90px;
-            padding-bottom: 40px;
-            text-align: center;
-        }
-
-        h1 {
-            color: #ff6b35;
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        h2 {
-            color: #e0e0e0;
-            font-size: 22px;
-            font-weight: 400;
-            margin-bottom: 40px;
-        }
-
-        .info-box {
-            background-color: #111111;
-            border: 1px solid #1f1f1f;
-            border-radius: 15px;
-            padding: 30px 40px;
-            margin: 12px 0;
-            max-width: 650px;
-            width: 90%;
-            text-align: left;
-            transition: all 0.3s ease;
-        }
-
-        .info-box:hover {
-            border-color: #ff6b35;
-            transform: translateY(-3px);
-        }
-
-        .info-box h3 {
-            color: #ff6b35;
-            font-size: 20px;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .info-box p {
-            color: #a0a0a0;
-            font-size: 16px;
-            line-height: 1.8;
-        }
-
-        @media (max-width: 768px) {
-            .nav-menu a {
-                padding: 15px 12px;
-                font-size: 13px;
-            }
-            h1 {
-                font-size: 32px;
-            }
-            .info-box {
-                padding: 20px 25px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | John Kendrick Cabunilas</title>
+  
+  <!-- Google Fonts (must come BEFORE style.css) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <nav class="top-nav">
-        <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" class="active">About Me</a></li>
-            <li><a href="techstack.html">Tech Stack</a></li>
-            <li><a href="certifications.html">Certifications</a></li>
-        </ul>
-    </nav>
+  <nav class="top-nav">
+    <a href="index.html" class="nav-brand">
+      <div class="brand-circle">JK</div>
+      <span class="brand-name">John Kendrick Cabunilas</span>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About Me</a></li>
+      <li><a href="tech-stack.html">Tech Stack</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <div class="container-custom">
-        <h1>About Me</h1>
-        <h2>Get to know who I am</h2>
+  <div class="container-custom">
+    <h1 class="page-title">About Me</h1>
+    <h2 class="page-subtitle">Get to know who I am</h2>
 
-        <div class="info-box">
-            <h3><i class="fas fa-user"></i> Who I Am</h3>
-            <p>My name is John Kendrick Alexander Cabunilas, and I am currently a student with a strong passion for technology and information systems. I have always been fascinated by how computers and software work, which led me to pursue a path in IT. In my free time, I enjoy exploring new technologies, building small projects, and learning about the latest trends in web development. I believe that continuous learning is the key to success in the ever-evolving tech industry.</p>
-        </div>
-
-        <div class="info-box">
-            <h3><i class="fas fa-graduation-cap"></i> My Education</h3>
-            <p>I am currently pursuing my studies while actively building hands-on experience through various projects and certifications. My coursework has introduced me to programming, web development, and database management. I am committed to applying the theoretical knowledge I gain in class to real-world scenarios through practical projects and self-study.</p>
-        </div>
-
-        <div class="info-box">
-            <h3><i class="fas fa-bullseye"></i> My Professional Goals</h3>
-            <p>I wanna be an IT professional who can build reliable and efficient digital solutions for businesses and communities. My ultimate goal is to become a full-stack developer capable of creating complete web applications from scratch. I aspire to work in a dynamic tech company where I can contribute my skills while continuing to grow as a developer. In the long term, I hope to use my expertise to help organizations improve their digital presence and operational efficiency.</p>
-        </div>
-
-        <div class="info-box">
-            <h3><i class="fas fa-envelope"></i> Let's Connect</h3>
-            <p>I am always open to collaboration, learning opportunities, and meaningful conversations about technology. Feel free to reach out if you would like to connect or work together on a project.</p>
-        </div>
+    <div class="info-box">
+      <h3><i class="fas fa-user"></i> Who I Am</h3>
+      <p>My name is John Kendrick Alexander Cabunilas, and I am currently a student with a strong passion for technology and information systems. I have always been fascinated by how computers and software work, which led me to pursue a path in IT. In my free time, I enjoy exploring new technologies, building small projects, and learning about the latest trends in web development. I believe that continuous learning is the key to success in the ever-evolving tech industry.</p>
     </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="info-box">
+      <h3><i class="fas fa-graduation-cap"></i> My Education</h3>
+      <p>I am currently pursuing my studies while actively building hands-on experience through various projects and certifications. My coursework has introduced me to programming, web development, and database management. I am committed to applying the theoretical knowledge I gain in class to real-world scenarios through practical projects and self-study.</p>
+    </div>
+
+    <div class="info-box">
+      <h3><i class="fas fa-bullseye"></i> My Professional Goals</h3>
+      <p>I wanna be an IT professional who can build reliable and efficient digital solutions for businesses and communities. My ultimate goal is to become a full-stack developer capable of creating complete web applications from scratch. I aspire to work in a dynamic tech company where I can contribute my skills while continuing to grow as a developer. In the long term, I hope to use my expertise to help organizations improve their digital presence and operational efficiency.</p>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
