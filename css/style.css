@@ -1,4 +1,4 @@
-/* CSS Variables - must be at the top before all other rulesets */
+/* CSS Variables */
 :root {
   --color-bg: #0a0a0a;
   --color-card: #111111;
@@ -223,59 +223,41 @@ html, body {
 }
 
 /* ============================================
-   TECH STACK PAGE
+   TECH STACK PAGE - VISIBLE BOXES
    ============================================ */
-.skill-box {
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 700px;
+  width: 90%;
+}
+
+.tech-card {
   background-color: var(--color-card);
   border: 1px solid var(--color-border);
   border-radius: 15px;
-  padding: 30px 40px;
-  margin: 12px 0;
-  max-width: 600px;
-  width: 90%;
-  text-align: left;
+  padding: 35px 20px;
+  text-align: center;
   transition: all 0.3s ease;
 }
 
-.skill-box:hover {
+.tech-card:hover {
   border-color: var(--color-accent);
-  transform: translateY(-3px);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(255, 107, 53, 0.1);
 }
 
-.skill-box h3 {
-  color: var(--color-accent);
-  font-size: 20px;
-  margin-bottom: 20px;
-  font-weight: 600;
-}
-
-.skill-items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  align-items: center;
-}
-
-.skill-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.skill-item i {
+.tech-card i {
   font-size: 50px;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: 12px;
+  display: block;
 }
 
-.skill-item span {
-  color: var(--color-muted);
-  font-size: 14px;
-  font-weight: 500;
+.tech-card span {
+  color: var(--color-text);
+  font-size: 15px;
+  font-weight: 600;
 }
 
 /* ============================================
@@ -527,10 +509,12 @@ html, body {
     padding: 20px 25px;
   }
 
-  .skill-item i {
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tech-card i {
     font-size: 40px;
-    width: 40px;
-    height: 40px;
   }
 
   .cert-image {
@@ -567,6 +551,10 @@ html, body {
 
   .hero-title {
     font-size: 24px;
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr;
   }
 
   .social-card {
