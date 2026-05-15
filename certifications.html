@@ -30,35 +30,45 @@
 </nav>
 
   <div class="container-custom">
-    <h1 class="page-title">My Certifications</h1>
-    <h2 class="page-subtitle">What I've achieved and what's next</h2>
+    <h1 class="page-title">Certifications</h1>
 
-    <div class="cert-box completed" onclick="showCert('word')">
-      <img src="Images/word-cert.jpg" alt="Microsoft Word Certificate" class="cert-image">
-      <h3><i class="fas fa-file-word"></i> Microsoft Word</h3>
-      <p>Proficient in document creation, formatting, and editing using Microsoft Word. Completed comprehensive training covering advanced formatting, mail merge, and document collaboration features.</p>
-      <span class="badge completed">Completed</span>
-      <br>
-      <a href="#" target="_blank" class="verify-link" onclick="event.stopPropagation()">
-        <i class="fas fa-external-link-alt"></i> Verify Certification
-      </a>
-    </div>
+    <div class="cert-row">
+      
+      <div class="cert-item" onclick="showCert('python')">
+        <div class="cert-badge-img">
+          <img src="Images/python-badge.png" alt="Python Essentials 1">
+        </div>
+        <p class="cert-name">Python Essentials</p>
+      </div>
 
-    <div class="cert-box completed" onclick="showCert('powerpoint')">
-      <img src="Images/powerpoint-cert.jpg" alt="Microsoft PowerPoint Certificate" class="cert-image">
-      <h3><i class="fas fa-file-powerpoint"></i> Microsoft PowerPoint</h3>
-      <p>Skilled in creating professional presentations with Microsoft PowerPoint. Mastered slide design, animations, transitions, and presentation delivery techniques.</p>
-      <span class="badge completed">Completed</span>
-      <br>
-      <a href="#" target="_blank" class="verify-link" onclick="event.stopPropagation()">
-        <i class="fas fa-external-link-alt"></i> Verify Certification
-      </a>
-    </div>
+      <div class="cert-item" onclick="showCert('networking')">
+        <div class="cert-badge-img">
+          <img src="Images/networking-badge.png" alt="Networking Basics">
+        </div>
+        <p class="cert-name">Networking Basics</p>
+      </div>
 
-    <div class="cert-box ongoing" onclick="showCert('more')">
-      <h3><i class="fas fa-rocket"></i> More Certifications</h3>
-      <p>Currently pursuing additional certifications in web development, programming, and IT fundamentals to expand my skill set and professional qualifications.</p>
-      <span class="badge ongoing">On Going</span>
+      <div class="cert-item" onclick="showCert('word')">
+        <div class="cert-badge-img">
+          <img src="Images/word-badge.png" alt="Microsoft Word Specialist">
+        </div>
+        <p class="cert-name">Microsoft Word Specialist</p>
+      </div>
+
+      <div class="cert-item" onclick="showCert('excel')">
+        <div class="cert-badge-img">
+          <img src="Images/excel-badge.png" alt="Microsoft Excel Specialist">
+        </div>
+        <p class="cert-name">Microsoft Excel Specialist</p>
+      </div>
+
+      <div class="cert-item" onclick="showCert('c-essentials')">
+        <div class="cert-badge-img">
+          <img src="Images/c-essentials-badge.png" alt="C Essentials 1">
+        </div>
+        <p class="cert-name">C Essentials</p>
+      </div>
+
     </div>
   </div>
 
@@ -67,39 +77,48 @@
 
   <script>
     function showCert(cert) {
-      if (cert === 'word') {
+      if (cert === 'python') {
         Swal.fire({
-          title: 'Microsoft Word Certification',
+          title: 'Python Essentials 1',
+          text: 'Cisco certification covering fundamental Python programming concepts.',
+          confirmButtonColor: '#ff6b35',
+          confirmButtonText: 'Close',
+          background: '#111111',
+          color: '#e0e0e0'
+        });
+      } else if (cert === 'networking') {
+        Swal.fire({
+          title: 'Networking Basics',
+          text: 'Cisco certification covering fundamental networking concepts.',
+          confirmButtonColor: '#ff6b35',
+          confirmButtonText: 'Close',
+          background: '#111111',
+          color: '#e0e0e0'
+        });
+      } else if (cert === 'word') {
+        Swal.fire({
+          title: 'Microsoft Word Specialist',
           text: 'Proficient in document creation, formatting, and editing.',
-          imageUrl: 'Images/word-cert.jpg',
-          imageWidth: 400,
-          imageHeight: 300,
-          imageAlt: 'Microsoft Word Certificate',
           confirmButtonColor: '#ff6b35',
           confirmButtonText: 'Close',
           background: '#111111',
           color: '#e0e0e0'
         });
-      } else if (cert === 'powerpoint') {
+      } else if (cert === 'excel') {
         Swal.fire({
-          title: 'Microsoft PowerPoint Certification',
-          text: 'Skilled in creating professional presentations.',
-          imageUrl: 'Images/powerpoint-cert.jpg',
-          imageWidth: 400,
-          imageHeight: 300,
-          imageAlt: 'Microsoft PowerPoint Certificate',
+          title: 'Microsoft Excel Specialist',
+          text: 'Skilled in spreadsheet creation, formulas, and data analysis.',
           confirmButtonColor: '#ff6b35',
           confirmButtonText: 'Close',
           background: '#111111',
           color: '#e0e0e0'
         });
-      } else {
+      } else if (cert === 'c-essentials') {
         Swal.fire({
-          title: 'More Certifications',
-          text: 'Currently pursuing additional certifications. Stay tuned!',
-          icon: 'info',
+          title: 'C Essentials 1',
+          text: 'Cisco certification covering fundamental C programming concepts.',
           confirmButtonColor: '#ff6b35',
-          confirmButtonText: 'Got it!',
+          confirmButtonText: 'Close',
           background: '#111111',
           color: '#e0e0e0'
         });
