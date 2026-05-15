@@ -643,6 +643,7 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
   transition: transform 0.3s ease;
 }
 
@@ -657,7 +658,6 @@ html, body {
   align-items: center;
   justify-content: center;
   margin-bottom: 15px;
-  cursor: pointer;
 }
 
 .cert-badge-img img {
@@ -672,13 +672,7 @@ html, body {
   font-size: 16px;
   font-weight: 500;
   text-align: center;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.cert-name:hover {
-  color: var(--color-accent-light);
-  text-decoration: underline;
+  margin: 0;
 }
 
 /* ============================================
