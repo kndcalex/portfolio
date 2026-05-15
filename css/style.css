@@ -71,15 +71,27 @@ html, body {
   white-space: nowrap;
 }
 
-/* Hamburger button - hidden by default */
-.hamburger {
+/* ===== HAMBURGER - TRANSPARENT, NO WHITE BG ===== */
+.hamburger,
+.hamburger:focus,
+.hamburger:active {
   display: none;
-  background: none;
-  border: none;
-  color: var(--color-accent);
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  color: var(--color-accent) !important;
   font-size: 24px;
   cursor: pointer;
   padding: 10px;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+
+.hamburger i {
+  background: transparent !important;
+  color: var(--color-accent) !important;
 }
 
 /* Desktop nav menu */
@@ -235,7 +247,7 @@ html, body {
 }
 
 /* ============================================
-   TECH STACK PAGE - VISIBLE BOXES
+   TECH STACK PAGE
    ============================================ */
 .tech-grid {
   display: grid;
@@ -478,8 +490,7 @@ html, body {
 }
 
 /* ============================================
-   TABLET BREAKPOINT (321px - 768px)
-   Hamburger menu active
+   TABLET (321px - 768px)
    ============================================ */
 @media (max-width: 768px) {
   .top-nav {
@@ -487,8 +498,14 @@ html, body {
     padding: 0 20px;
   }
 
-  .hamburger {
+  .hamburger,
+  .hamburger:focus,
+  .hamburger:active {
     display: block;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
   }
 
   .nav-menu {
@@ -574,8 +591,7 @@ html, body {
 }
 
 /* ============================================
-   MOBILE BREAKPOINT (320px and below)
-   Hamburger menu active, brand name hidden
+   MOBILE (320px and below)
    ============================================ */
 @media (max-width: 320px) {
   .top-nav {

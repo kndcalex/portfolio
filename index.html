@@ -69,6 +69,29 @@
       white-space: nowrap;
     }
 
+    /* HAMBURGER - TRANSPARENT */
+    .hamburger,
+    .hamburger:focus,
+    .hamburger:active {
+      display: none;
+      background: transparent !important;
+      background-color: transparent !important;
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+      color: #ff6b35 !important;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 10px;
+      -webkit-appearance: none !important;
+      appearance: none !important;
+    }
+
+    .hamburger i {
+      background: transparent !important;
+      color: #ff6b35 !important;
+    }
+
     .nav-menu {
       list-style: none;
       display: flex;
@@ -153,21 +176,52 @@
       padding: 0 20px;
     }
 
-    /* Responsive */
+    /* MOBILE */
     @media (max-width: 768px) {
       .top-nav {
-        height: auto;
-        padding: 10px 20px;
+        height: 70px;
+        padding: 0 20px;
+      }
+
+      .hamburger,
+      .hamburger:focus,
+      .hamburger:active {
+        display: block;
+        background: transparent !important;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
       }
 
       .nav-menu {
-        flex-wrap: wrap;
-        justify-content: flex-end;
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: #111111;
+        border-bottom: 1px solid #1f1f1f;
+        flex-direction: column;
+        padding: 10px 0;
+      }
+
+      .nav-menu.active {
+        display: flex;
+      }
+
+      .nav-menu li {
+        width: 100%;
+        text-align: center;
       }
 
       .nav-menu a {
-        padding: 15px 12px;
-        font-size: 13px;
+        padding: 15px 20px;
+        font-size: 16px;
+      }
+
+      .nav-menu a.active::after {
+        left: 30%;
+        width: 40%;
       }
 
       .brand-name {
@@ -189,13 +243,17 @@
     }
 
     @media (max-width: 320px) {
-      .nav-menu a {
-        padding: 12px 10px;
-        font-size: 12px;
+      .top-nav {
+        padding: 0 15px;
       }
 
       .brand-name {
         display: none;
+      }
+
+      .nav-menu a {
+        padding: 12px 15px;
+        font-size: 15px;
       }
 
       .hero-title {
@@ -206,7 +264,7 @@
 </head>
 <body>
 
-<nav class="top-nav">
+<<nav class="top-nav">
   <a href="index.html" class="nav-brand">
     <div class="brand-circle">JK</div>
     <span class="brand-name">John Kendrick Cabunilas</span>
@@ -215,7 +273,7 @@
     <i class="fas fa-bars"></i>
   </button>
   <ul class="nav-menu" id="navMenu">
-    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About Me</a></li>
     <li><a href="techstack.html">Tech Stack</a></li>
     <li><a href="certifications.html">Certifications</a></li>
@@ -232,9 +290,30 @@
   </section>
 
   <script>
+    // Auto-highlight current page
+    document.addEventListener('DOMContentLoaded', function() {
+      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      const links = document.querySelectorAll('.nav-menu a');
+      links.forEach(link => {
+        link.classList.remove('active');
+        const linkPage = link.getAttribute('href').split('/').pop();
+        if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Toggle hamburger menu
     function toggleMenu() {
       document.getElementById('navMenu').classList.toggle('active');
     }
+
+    // Close menu when a link is clicked
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navMenu').classList.remove('active');
+      });
+    });
   </script>
   
 </body>
