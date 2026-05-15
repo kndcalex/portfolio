@@ -836,10 +836,17 @@ html, body {
 }
 
 .cert-name {
+  display: block;
   margin-top: 15px;
   font-size: 15px;
   font-weight: 600;
   color: #e0e0e0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.cert-name:hover {
+  color: #ff6b35;
 }
 
 /* ========== CERTIFICATION MODAL ========== */
