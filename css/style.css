@@ -18,10 +18,10 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--color-bg);
-  color: var(--color-text);
+  background-color: var(--color-bg) !important;
+  color: var(--color-text) !important;
   min-height: 100vh;
 }
 
@@ -29,7 +29,7 @@ body {
    TOP NAVIGATION
    ============================================ */
 .top-nav {
-  background-color: var(--color-card) !important;
+  background-color: var(--color-card);
   border-bottom: 1px solid var(--color-border);
   padding: 0 40px;
   position: fixed;
@@ -223,37 +223,56 @@ body {
 }
 
 /* ============================================
-   TECH STACK PAGE - GRID
+   TECH STACK PAGE
    ============================================ */
-.tech-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  max-width: 700px;
-  width: 90%;
-}
-
-.tech-card {
+.skill-box {
   background-color: var(--color-card);
   border: 1px solid var(--color-border);
   border-radius: 15px;
-  padding: 40px 20px;
-  text-align: center;
+  padding: 30px 40px;
+  margin: 12px 0;
+  max-width: 600px;
+  width: 90%;
+  text-align: left;
   transition: all 0.3s ease;
 }
 
-.tech-card:hover {
+.skill-box:hover {
   border-color: var(--color-accent);
-  transform: translateY(-5px);
+  transform: translateY(-3px);
 }
 
-.tech-card i {
+.skill-box h3 {
+  color: var(--color-accent);
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.skill-item i {
   font-size: 50px;
-  margin-bottom: 15px;
-  display: block;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.tech-card span {
+.skill-item span {
   color: var(--color-muted);
   font-size: 14px;
   font-weight: 500;
@@ -508,12 +527,10 @@ body {
     padding: 20px 25px;
   }
 
-  .tech-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .tech-card i {
+  .skill-item i {
     font-size: 40px;
+    width: 40px;
+    height: 40px;
   }
 
   .cert-image {
@@ -550,10 +567,6 @@ body {
 
   .hero-title {
     font-size: 24px;
-  }
-
-  .tech-grid {
-    grid-template-columns: 1fr;
   }
 
   .social-card {
