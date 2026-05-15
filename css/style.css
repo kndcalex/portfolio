@@ -71,6 +71,18 @@ html, body {
   white-space: nowrap;
 }
 
+/* Hamburger button - hidden by default */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-accent);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Desktop nav menu */
 .nav-menu {
   list-style: none !important;
   display: flex;
@@ -466,22 +478,48 @@ html, body {
 }
 
 /* ============================================
-   RESPONSIVE BREAKPOINTS
+   TABLET BREAKPOINT (321px - 768px)
+   Hamburger menu active
    ============================================ */
 @media (max-width: 768px) {
   .top-nav {
-    height: auto;
-    padding: 10px 20px;
+    height: 70px;
+    padding: 0 20px;
+  }
+
+  .hamburger {
+    display: block;
   }
 
   .nav-menu {
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: var(--color-card);
+    border-bottom: 1px solid var(--color-border);
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
   }
 
   .nav-menu a {
-    padding: 15px 12px;
-    font-size: 13px;
+    padding: 15px 20px;
+    font-size: 16px;
+  }
+
+  .nav-menu a.active::after {
+    left: 30%;
+    width: 40%;
   }
 
   .brand-name {
@@ -535,14 +573,22 @@ html, body {
   }
 }
 
+/* ============================================
+   MOBILE BREAKPOINT (320px and below)
+   Hamburger menu active, brand name hidden
+   ============================================ */
 @media (max-width: 320px) {
-  .nav-menu a {
-    padding: 12px 10px;
-    font-size: 12px;
+  .top-nav {
+    padding: 0 15px;
   }
 
   .brand-name {
     display: none;
+  }
+
+  .nav-menu a {
+    padding: 12px 15px;
+    font-size: 15px;
   }
 
   .page-title {

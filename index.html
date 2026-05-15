@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | John Kendrick Cabunilas</title>
+  <title>Home | John Kendrick Alexander Cabunilas</title>
   
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -206,27 +206,36 @@
 </head>
 <body>
 
-  <nav class="top-nav">
-    <a href="index.html" class="nav-brand">
-      <div class="brand-circle">JK</div>
-      <span class="brand-name">John Kendrick Cabunilas</span>
-    </a>
-    <ul class="nav-menu">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About Me</a></li>
-      <li><a href="techstack.html">Tech Stack</a></li>
-      <li><a href="certifications.html">Certifications</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+<nav class="top-nav">
+  <a href="index.html" class="nav-brand">
+    <div class="brand-circle">JK</div>
+    <span class="brand-name">John Kendrick Cabunilas</span>
+  </a>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <i class="fas fa-bars"></i>
+  </button>
+  <ul class="nav-menu" id="navMenu">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About Me</a></li>
+    <li><a href="techstack.html">Tech Stack</a></li>
+    <li><a href="certifications.html">Certifications</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
   <section class="hero">
     <div class="profile-circle">
       <img src="profile.jpg" alt="John Kendrick Cabunilas">
     </div>
-    <h1 class="hero-title">Hi, I'm John Kendrick Cabunilas</h1>
+    <h1 class="hero-title">Hi, I'm John Kendrick Alexander Cabunilas</h1>
     <p class="hero-desc">Welcome to my personal portfolio website. I am thriving for a successful life where I can travel without worrying about anything.</p>
   </section>
 
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('active');
+    }
+  </script>
+  
 </body>
 </html>
